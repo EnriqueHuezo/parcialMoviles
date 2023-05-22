@@ -1,39 +1,54 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="match_parent"
-    android:layout_height="wrap_content"
-    xmlns:app="http://schemas.android.com/apk/res-auto">
 
-    <androidx.cardview.widget.CardView
-        android:id="@+id/museum_item_card_view"
+<layout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+        <variable
+            name="viewmodel"
+            type="com.enrique.museum.ui.viewmodel.MuseumViewModel" />
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        app:cardCornerRadius="@dimen/cardview_default_radius"
-        app:cardElevation="@dimen/cardview_default_elevation"
-        app:layout_constraintTop_toTopOf="parent">
+        android:layout_marginBottom="@dimen/small_gap">
 
-        <LinearLayout
+        <androidx.cardview.widget.CardView
+            android:id="@+id/museum_item_card_view"
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:orientation="vertical"
-            android:padding="@dimen/medium_gap">
+            android:layout_height="wrap_content"
+            android:backgroundTint="@color/background_card"
+            app:cardCornerRadius="8dp"
+            app:cardElevation="16dp"
+            app:layout_constraintTop_toTopOf="parent">
 
-            <TextView
-                android:id="@+id/name_text_view"
+            <LinearLayout
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content">
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                android:padding="@dimen/medium_gap">
 
-            </TextView>
+                <TextView
+                    android:id="@+id/name_text_view"
+                    android:layout_width="match_parent"
+                    android:textColor="@color/white"
+                    android:layout_height="wrap_content">
 
-            <TextView
-                android:id="@+id/ubication_text_view"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content">
+                </TextView>
 
-            </TextView>
+                <TextView
+                    android:id="@+id/ubication_text_view"
+                    android:layout_width="match_parent"
+                    android:textColor="@color/white"
+                    android:layout_height="wrap_content">
 
-        </LinearLayout>
+                </TextView>
 
-    </androidx.cardview.widget.CardView>
-</androidx.constraintlayout.widget.ConstraintLayout>
+            </LinearLayout>
+
+        </androidx.cardview.widget.CardView>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

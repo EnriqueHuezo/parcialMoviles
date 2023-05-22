@@ -14,6 +14,7 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         tools:context=".ui.addmuseum.AddMuseum"
+        android:background="@color/white"
         android:padding="@dimen/medium_gap">
 
 
